@@ -1,4 +1,6 @@
 import { Tabs } from "expo-router";
+import FontAwesome from '@expo/vector-icons/FontAwesome';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 export default function RootTabsLayout() {
     return (
@@ -18,8 +20,14 @@ export default function RootTabsLayout() {
                 }
             
         }}>
-            <Tabs.Screen name="index" options={{ title: "Início" }} />
-            <Tabs.Screen name="contatos" options={{ title: "Contatos" }} />
+            <Tabs.Screen name="index" options={{ 
+                title: "Início" ,
+                tabBarIcon:(({color})=>(<FontAwesome name="home" size={24} color={color} />))
+                }} />
+            <Tabs.Screen name="contatos" options={{ 
+                title: "Contatos" ,
+                tabBarIcon:(({color})=>(<MaterialIcons name="contact-support" size={24} color={color} />))
+            }} />
         </Tabs>
     )
 }
