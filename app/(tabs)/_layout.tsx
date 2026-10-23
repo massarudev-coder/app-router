@@ -14,6 +14,7 @@ export default function RootTabsLayout() {
                 },
                 tabBarLabelStyle:{
                     fontSize: 15,
+                    // algo nada
                 }
             
         }}>
