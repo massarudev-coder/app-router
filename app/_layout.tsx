@@ -7,15 +7,15 @@ export default function RootStackLayout() {
 
     return (
         <Stack screenOptions={{
-            headerShown: true,
+            headerShown: false,
             headerStyle: {
-                backgroundColor: '#062952', // Cor de fundo do cabeçalho
+                backgroundColor: '#072543', // Cor de fundo do cabeçalho
             },
-            headerTintColor: '#fff', // Cor do texto do cabeçalho
+            headerTintColor: '#ffffff', // Cor do texto do cabeçalho
             headerTitleAlign: 'center', // Alinhamento do texto do cabeçalho
         }}>
             <Stack.Screen name="inicio" options={{
-                title: 'Home',
+                title: "Home",
                 headerRight: () => <Button title="Ir para Tabs" onPress={() => router.push("/(tabs)/contatos")} />
             }} />
             <Stack.Screen name="auth/login" options={{
